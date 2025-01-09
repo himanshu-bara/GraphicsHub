@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancer Profile</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      .freelancer-profile {
+        max-width: 800px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .profile-header h2 {
+        margin: 0;
+        color: #007bff;
+        font-size: 28px;
+      }
+
+      .profile-header p {
+        margin: 0;
+        color: #6c757d;
+        font-size: 16px;
+      }
+
+      .profile-description {
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .profile-photo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .profile-photo img {
+        width: 150px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .portfolio-item {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+
+      .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .portfolio-item p {
+        padding: 12px;
+        text-align: center;
+        margin: 0;
+        background-color: #343a40;
+        color: white;
+        font-size: 14px;
+      }
+
+      .portfolio-item:hover {
+        transform: scale(1.05);
+      }
+
+      .skills,
+      .contact-info,
+      .suggestions {
+        margin-top: 20px;
+      }
+
+      .skills h3,
+      .contact-info h3,
+      .suggestions h3 {
+        color: #007bff;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .skills ul,
+      .contact-info p {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .skills li {
+        display: inline-block;
+        margin-right: 10px;
+        background-color: #28a745;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .suggestions {
+        margin-top: 20px;
+      }
+
+      .suggestions h3 {
+        color: #007bff;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .similar-profiles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+      .similar-profile {
+        flex: 0 1 calc(33.333% - 20px);
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .similar-profile img {
+        max-width: 100%;
+        display: block;
+        margin: 10px auto;
+        border-radius: 5px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .similar-profile-details {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+      }
+
+      .view-profile-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+      }
+
+      .similar-profile-details h4 {
+        margin: 0;
+        color: #007bff;
+        font-size: 18px;
+      }
+
+      .similar-profile-details p {
+        margin: 0;
+        color: #6c757d;
+        text-align: center;
+      }
+
+    .view-profile-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* edits */
+.close {
+  float: right;
+  cursor: pointer;
+  font-weight: 900;
+ font-size:x-large;
+  color: #000;
+}
+
+.close:hover {
+  color: red;
+}
+    </style>
+  </head>
+  <body>
+    <div class="freelancer-profile">
+      <a href="http://127.0.0.1:5501/designer/Swiggy/index.html"><span class="close" id="closeButton">&times;</span></a>
+      <div class="profile-photo">
+        <img src="profile1.jpeg" alt="Freelancer Photo" />
+      </div>
+
+      <div class="profile-header">
+        <h2>Himanshu Barapatre</h2>
+        <p>Rating: 4.8 &#9733;</p>
+      </div>
+
+      <div class="profile-description">
+        <p>
+          Passionate and creative freelancer with expertise in graphic design
+          and web development. I strive to deliver high-quality work that
+          exceeds client expectations. Let's turn your ideas into reality!
+        </p>
+      </div>
+
+      <div class="portfolio">
+        <div class="portfolio-item">
+          <img src="1.jpg" alt="Portfolio Item 1" />
+          <p>A National Agenda</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="2.jpg" alt="Portfolio Item 2" />
+          <p>Placement Year 2025</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="1.jpg" alt="Portfolio Item 2" />
+          <p>Marry GO Arround</p>
+        </div>
+        <!-- Add more portfolio items as needed -->
+      </div>
+
+      <div class="skills">
+        <h3>Skills and Expertise</h3>
+        <ul>
+          <li>Graphic Design</li>
+          <li>Web Development</li>
+          <li>UI/UX Design</li>
+          <li>Illustration</li>
+          <!-- Add more skills as needed -->
+        </ul>
+      </div>
+
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>Email: freelancer@example.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>LinkedIn: linkedin.com/in/freelancer</p>
+      </div>
+    </div>
+
+    <div class="freelancer-profile">
+      <div class="suggestions">
+        <h3>Similar Profiles</h3>
+        <div class="similar-profiles">
+          <div class="similar-profile">
+            <img src="profile1.jpeg" alt="Similar Profile 1" />
+            <div class="similar-profile-details">
+              <h4>Similar Freelancer 1</h4>
+              <p>Rating: 4.5 &#9733;</p>
+              <p>Graphic Design | UI/UX Design</p>
+              <button
+                class="view-profile-btn"
+                onclick="viewProfile('profile1')"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+          <div class="similar-profile">
+            <img src="profile2.jpeg" alt="Similar Profile 2" />
+            <div class="similar-profile-details">
+              <h4>Similar Freelancer 2</h4>
+              <p>Rating: 4.2 &#9733;</p>
+              <p>UI/UX Design | Illustration</p>
+              <button
+                class="view-profile-btn"
+                onclick="viewProfile('profile2')"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+          <div class="similar-profile">
+            <img src="profile3.jpeg" alt="Similar Profile 2" />
+            <div class="similar-profile-details">
+              <h4>Similar Freelancer 2</h4>
+              <p>Rating: 4.2 &#9733;</p>
+              <p>UI/UX Design | Illustration</p>
+              <button
+                class="view-profile-btn"
+                onclick="viewProfile('profile2')"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+          <!-- Add more similar profiles as needed -->
+        </div>
+      </div>
+    </div>
+    <script>
+      function viewProfile(profileName) {
+        // Add logic to redirect to the profile page or display more details
+        console.log(`Viewing profile: ${profileName}`);
+      }
+    </script>
+  </body>
+</html>

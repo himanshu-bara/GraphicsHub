@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Designer Profiles</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="logo black.png" alt="Logo"
+          /></a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="designer/swiggy/index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="designer/Swiggy/index.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="login" id="loginButton">
+          <a href="login.html"><span class="fas fa-sign-in-alt"></span> Login</a>
+        </div>
+      </header>
+    <section class="hed">
+        <h1>Designer Profiles.</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" oninput="filterDesigners()" placeholder="Search by Specialty">
+            <span class="search-icon"></span>
+            <span class="clear-icon" onclick="clearSearch()">&#10006;</span>
+        </div>
+        <a href="http://127.0.0.1:5501/service.html"><span class="close" id="closeButton"></span></a>
+    </section>
+
+    <section class="main-container">
+        <section id="designers">
+            <!-- Designer profiles will be dynamically added here -->
+        </section>
+
+        <section class="side-bar">
+            <section id="hired-designers">
+                <div class="designers-heading">
+                    <h2>Hired Designers</h2>
+                    <ul id="hired-list"></ul>
+                </div>
+            </section>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+            <section id="saved-designers">
+                <div class="designers-heading">
+                    <h2>Saved Designers</h2>
+                    <ul id="saved-list"></ul>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-photo" class="designer-photo"></div>
+            <h2 id="modal-title"></h2>
+            <p id="modal-specialty"></p>
+            <h3>Past Works and Experiences</h3>
+            <ul id="modal-works"></ul>
+            <a href="freelancer\index.html">
+                <button >View Profile</button>
+            </a>
+            <button onclick="saveDesignerModal()">Save Profile</button>
+            <button onclick="hireDesigner()">Hire</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const clearIcon = document.getElementById("clearIcon");
+
+            searchInput.addEventListener("input", function () {
+                clearIcon.style.display = this.value ? "block" : "none";
+            });
+
+            clearIcon.addEventListener("click", function () {
+                searchInput.value = "";
+                clearIcon.style.display = "none";
+            });
+
+            // Rest of the code remains unchanged
+        });
+    </script>
+</body>
+</html>
